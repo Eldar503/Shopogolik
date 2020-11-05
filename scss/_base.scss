@@ -1,0 +1,48 @@
+@import './fonts/fonts.scss';
+
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-6 {
+	width: 50%;
+}

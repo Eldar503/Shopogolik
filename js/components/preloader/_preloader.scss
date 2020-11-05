@@ -1,0 +1,93 @@
+.preloader {
+	@include position(fixed, 0, 0);
+	@include flexbox;
+	z-index: 3;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	animation: 1s overlay 2.5s linear forwards;
+	h1 {
+		@include font("Poppins", 72px, 700);
+		animation: 1s fontSize 0s ease-in-out forwards;
+	}
+	.o-1 {
+		animation: 1s o 3s ease-in-out infinite forwards;
+	}
+	.c {
+		animation: 1s c 3.2s ease-in-out infinite forwards;
+	}
+	span {
+		display: inline-block;
+	}
+	.dot {
+		color: red;
+	}
+	&__dot {
+		position: absolute;
+		left: 48.6%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 0;
+		height: 0;
+		z-index: 11;
+		background-color: black;
+		border-radius: 50%;
+		animation: 3s blackHole 1s linear forwards;
+	}
+}
+
+@keyframes blackHole {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	100% {
+		width: 3000px;
+		height: 3000px;
+	}
+}
+
+// @keyframes overlay {
+// 	from {
+// 		opacity: 1;
+// 	}
+// 	50% {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 0;
+// 		visibility: hidden;
+// 	}
+// }
+
+@keyframes fontSize {
+	from {
+		font-size: 372px;
+	}
+	to {
+		font-size: 72px;
+		z-index: 12;
+	}
+}
+
+@keyframes o {
+	from {
+		color: white;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+}
+
+@keyframes c {
+	from {
+		color: white;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-180px);
+	}
+}
